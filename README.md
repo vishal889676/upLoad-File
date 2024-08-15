@@ -28,7 +28,7 @@
 
   ### Challenge faced in Backend
      1. In File Handling
-       - **Challenge*: Handling various file types (PDF, DOCX, TXT) and ensuring they were processed correctly.
+      - **Challenge*: Handling various file types (PDF, DOCX, TXT) and ensuring they were processed correctly.
       - **Solution**: `express-fileupload` was chosen due to its simplicity and effectiveness in handling multipart file uploads. The files were saved to a specific directory, and errors 
                        were managed using try-catch blocks
           
