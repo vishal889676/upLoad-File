@@ -16,26 +16,26 @@
          The component tracks the upload and summarization processes, providing feedback to the user.
          CORS Issues:
 
-    ##  Challenge faced In(Frontend) File Handling: CORS (Cross-Origin Resource Sharing) errors occurred when the frontend tried to communicate with the backend.
+      - **challengefaced In(Frontend) File Handling**: CORS (Cross-Origin Resource Sharing) errors occurred when the frontend tried to communicate with the backend.
 
  
 ### Section-2: Backend (Express.js)
-  - **File Handling**: The backend was set up using Express.js, a popular web framework for Node.js. We used `express-fileupload` to handle file uploads. This middleware was chosen for 
+   - **File Handling**: The backend was set up using Express.js, a popular web framework for Node.js. We used `express-fileupload` to handle file uploads. This middleware was chosen for 
                       its simplicity and ease of integration.
-  - **Routing**: A separate router (`fileHandler.js`) was created to handle file-related operations. This router was then mounted on the main application, allowing for modular code 
+   - **Routing**: A separate router (`fileHandler.js`) was created to handle file-related operations. This router was then mounted on the main application, allowing for modular code 
                  organization.
-  - **Concurrent Requests**: Express.js inherently supports handling multiple concurrent requests. To ensure scalability, middleware was used to efficiently process incoming requests 
+   - **Concurrent Requests**: Express.js inherently supports handling multiple concurrent requests. To ensure scalability, middleware was used to efficiently process incoming requests 
                            without blocking the event loop.
 
-  ### Challenge faced in Backend
-   1. In File Handling
+   ### Challenge faced in Backend
+     1. In File Handling
       - **Challenge*: Handling various file types (PDF, DOCX, TXT) and ensuring they were processed correctly.
       - **Solution**: `express-fileupload` was chosen due to its simplicity and effectiveness in handling multipart file uploads. The files were saved to a specific directory, and errors 
                        were managed using try-catch blocks
           
-   2. In Concurrent Request Handling
-     - **Challenge**: Ensuring the backend could handle multiple concurrent requests without performance degradation.
-     - **Solution**:  Leveraged Node.js's non-blocking I/O and asynchronous capabilities. The architecture was designed to avoid bottlenecks, and stress testing was conducted to 
+     2. In Concurrent Request Handling
+       - **Challenge**: Ensuring the backend could handle multiple concurrent requests without performance degradation.
+       - **Solution**:  Leveraged Node.js's non-blocking I/O and asynchronous capabilities. The architecture was designed to avoid bottlenecks, and stress testing was conducted to 
                          validate  the server’s performance under load.
           
 
