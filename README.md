@@ -15,7 +15,7 @@
          The component tracks the upload and summarization processes, providing feedback to the user.
          CORS Issues:
 
- ###  Challenge faced. File Handling: CORS (Cross-Origin Resource Sharing) errors occurred when the frontend tried to communicate with the backend.
+ ###  Challenge faced In(Frontend) File Handling: CORS (Cross-Origin Resource Sharing) errors occurred when the frontend tried to communicate with the backend.
 
  
 ### 2 Backend (Express.js)
@@ -26,13 +26,13 @@
 - **Concurrent Requests**: Express.js inherently supports handling multiple concurrent requests. To ensure scalability, middleware was used to efficiently process incoming requests 
                            without blocking the event loop.
 
-- 
-### .. Challenge faced. File Handling
+  ### Challenge faced in Backend
+     1. In File Handling
        - **Challenge*: Handling various file types (PDF, DOCX, TXT) and ensuring they were processed correctly.
       - **Solution**: `express-fileupload` was chosen due to its simplicity and effectiveness in handling multipart file uploads. The files were saved to a specific directory, and errors 
                        were managed using try-catch blocks
           
-- ### .. Concurrent Request Handling
+     2. In Concurrent Request Handling
         - **Challenge**: Ensuring the backend could handle multiple concurrent requests without performance degradation.
         - **Solution**:  Leveraged Node.js's non-blocking I/O and asynchronous capabilities. The architecture was designed to avoid bottlenecks, and stress testing was conducted to 
                          validate  the server’s performance under load.
